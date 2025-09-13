@@ -1,0 +1,188 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/road/protos/StraightRoadSegment.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Grass.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/tables/protos/Table.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/advertising_board/protos/AdvertisingBoard.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/obstacles/protos/OilBarrel.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/animals/protos/Dog.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/animals/protos/Rabbit.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/garden/protos/Gnome.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/forklift/protos/Forklift.proto"
+EXTERNPROTO "../protos/Iris.proto"
+EXTERNPROTO "../protos/ArucoMarker.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/humans/pedestrian/protos/Pedestrian.proto"
+
+WorldInfo {
+  title "Iris Ardupilot"
+  basicTimeStep 2
+  FPS 20
+}
+Viewpoint {
+  orientation -0.09564783984383289 -0.97478614312014 0.20160224679841854 5.416994531346651
+  position -9.27733551085378 5.029628123091264 14.065902506569659
+  follow "Iris"
+  followSmoothness 0.01
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 300 100
+  appearance Grass {
+  }
+}
+StraightRoadSegment {
+  translation -15 0.3 0.02
+  rotation 0 0 1 0.105
+  width 16.5
+  rightBorder FALSE
+  leftBorder FALSE
+  length 140
+}
+Rabbit {
+  translation 6.05362 2.16178 0.88
+  rotation 0 0 -1 -2.3561953071795863
+  name "nibbles"
+}
+Gnome {
+  translation 10.8527 -4.46966 3.6788e-21
+  rotation 0 0 -1 -1.5707953071795862
+}
+Gnome {
+  translation 9.6927 -4.46966 3.6788e-21
+  rotation 0 0 -1 -1.5707953071795862
+  name "gnome(1)"
+}
+Gnome {
+  translation 8.6827 -4.46966 3.6788e-21
+  rotation 0 0 -1 -1.5707953071795862
+  name "gnome(2)"
+}
+Gnome {
+  translation 7.8127 -4.46966 3.6788e-21
+  rotation 0 0 -1 -1.5707953071795862
+  name "gnome(3)"
+}
+Gnome {
+  translation 6.8527 -4.46966 3.6788e-21
+  rotation 0 0 -1 -1.5707953071795862
+  name "gnome(4)"
+}
+Forklift {
+  translation 9.19827 2.56008 0.81
+  rotation 0 0 1 -2.3561953071795863
+  enablePhysics FALSE
+}
+Forklift {
+  translation -7.44701 0.269042 0.81
+  rotation 0 0 -1 8.23753e-07
+  name "forklift(1)"
+  enablePhysics FALSE
+}
+Dog {
+  translation 2.01339 5.94333 1.77636e-15
+  rotation 0 0 1 -2.6179953071795863
+  name "bentley"
+}
+OilBarrel {
+  translation 6.01625 2.27835 0.44
+}
+AdvertisingBoard {
+  translation 13.1012 17.8267 0
+  rotation 0 0 1 -1.469
+  frontTexture [
+    "../../../../../Tools/autotest/web-firmware/images/logo.png"
+  ]
+  backTexture [
+    "../../../../../Tools/autotest/web-firmware/images/logo.png"
+  ]
+  displayWidth 16.28
+  displayHeight 6
+  poleNumber 2
+  poleType "H-shape"
+  poleHeight 10
+}
+Table {
+  translation 0 0.92 0
+}
+Iris {
+  hidden linearVelocity_0 7.995617211985656e-19 -1.5812758330542024e-19 -1.564376171310101e-14
+  hidden angularVelocity_0 -3.550649612935059e-18 9.773338829459123e-18 2.5945256688299554e-19
+  translation 0.05796763634581024 1.4421968134953462 0.7949632125000001
+  rotation 7.115590944858972e-15 8.036397262950207e-15 1 0.0008955109849197421
+  controller "ardupilot_vehicle_controller"
+  controllerArgs [
+    "--motors"
+    "m1_motor, m2_motor, m3_motor, m4_motor"
+    "--camera"
+    "camera"
+    "--camera-port"
+    "5599"
+  ]
+  extensionSlot [
+    Camera {
+      translation 0.1 0 -0.01
+      rotation 0 1 0 1.5707996938995747
+      width 640
+      height 480
+    }
+  ]
+}
+ArucoMarker {
+  translation 3.72295 3.22428 0.03
+  rotation 0 1 0 1.01416e-06
+  name "aruco Friendly"
+  size 0.348
+  markerId "16"
+}
+ArucoMarker {
+  translation 4.36474 0.660038 0.0300004
+  rotation -8.02089e-07 -3.76347e-07 1 1.8326
+  name "aruco Enemy"
+  size 0.348
+  markerId "17"
+}
+Pedestrian {
+  translation -1.71295e-06 9.58 1.27
+  rotation 0 0 1 -1.5707953071795862
+}
+Pedestrian {
+  translation 2.01 9.58 1.37
+  rotation 0 0 1 -1.5707953071795862
+  name "pedestrian(1)"
+}
+Pedestrian {
+  translation 4.16 9.58 1.37
+  rotation 0 0 1 -1.5707953071795862
+  name "pedestrian(2)"
+}
+Pedestrian {
+  translation 6.35 9.58 1.37
+  rotation 0 0 1 -1.5707953071795862
+  name "pedestrian(3)"
+}
+Pedestrian {
+  translation 0.0999987 8.69 1.37
+  rotation 0 0 1 -1.5707953071795862
+  name "pedestrian(4)"
+}
+Pedestrian {
+  translation 2.07 8.69 1.47
+  rotation 0 0 1 -1.5707953071795862
+  name "pedestrian(5)"
+}
+Pedestrian {
+  translation 4.16 8.69 1.47
+  rotation 0 0 1 -1.5707953071795862
+  name "pedestrian(6)"
+}
+Pedestrian {
+  translation 6.44 8.69 1.47
+  rotation 0 0 1 -1.5707953071795862
+  name "pedestrian(7)"
+}
