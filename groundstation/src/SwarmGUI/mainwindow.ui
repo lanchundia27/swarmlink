@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SwarmCommanderGUI</class>
+ <widget class="QMainWindow" name="SwarmCommanderGUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SwarmCommanderGUI</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: &quot;black&quot;;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>260</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>testtting</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 13pt &quot;Arial&quot;;color: rgb(1, 255, 23);</string>
+   </property>
+   <widget class="QMenu" name="menuAgents">
+    <property name="title">
+     <string>Agents</string>
+    </property>
+    <addaction name="actionAdd_agent"/>
+    <addaction name="actionRemove_agent"/>
+   </widget>
+   <widget class="QMenu" name="menuGeofence">
+    <property name="title">
+     <string>Geofence</string>
+    </property>
+    <addaction name="actionEdit_Geofence"/>
+    <addaction name="actionSet_geofence"/>
+    <addaction name="actionReset_geofence"/>
+   </widget>
+   <addaction name="menuAgents"/>
+   <addaction name="menuGeofence"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionEdit_Geofence">
+   <property name="text">
+    <string>Edit geofence</string>
+   </property>
+  </action>
+  <action name="actionSet_geofence">
+   <property name="text">
+    <string>Set geofence</string>
+   </property>
+  </action>
+  <action name="actionReset_geofence">
+   <property name="text">
+    <string>Reset geofence</string>
+   </property>
+  </action>
+  <action name="actionAdd_agent">
+   <property name="text">
+    <string>Add agent</string>
+   </property>
+  </action>
+  <action name="actionRemove_agent">
+   <property name="text">
+    <string>Remove agent</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
