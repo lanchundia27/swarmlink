@@ -6,4 +6,5 @@ Ardupilot SITL is a safe (simulated) environment to test all the code for the co
     ii. If everything worked out in the previous script, you should have all prerequisites installed at this point run ./waf configure --board sitl
     iii. Build ardupilot for SITL with ./waf copter.
 3. We will use webots to visualize the drones. To install webots for your specific OS follow the guide: https://cyberbotics.com/doc/guide/installation-procedure.
-4. run the run_ardupilot_sitl.sh, then open webots (you may have to pip install some packages to run the shell file)
+4. pipinstall /docs/requirements.txt
+5.. run the run_ardupilot_sitl.sh, then open webots (and install any python packages I might've missed)

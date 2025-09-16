@@ -1,3 +1,0 @@
-Pyside6
-numpy
-empy

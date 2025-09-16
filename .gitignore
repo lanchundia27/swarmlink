@@ -1,4 +1,4 @@
-venv/
+env/
 mav.parm
 mav.tlog
 mav.tlog.raw
@@ -7,3 +7,4 @@ eeprom.bin
 .qtcreator/
 __pycache__
 .DS_store
+logs/

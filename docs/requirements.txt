@@ -1,0 +1,8 @@
+future
+empy
+mavproxy
+gnureadline
+pexpect
+pymavlink
+opencv
+Pyside6
